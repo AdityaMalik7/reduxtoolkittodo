@@ -12,7 +12,7 @@ function Todos() {
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
-            <div className="text-white">{todo.text}</div>
+            <div >{todo.text}</div>
             <button onClick={() => dispatch(removeTodo(todo.id))}>
               remove
             </button>

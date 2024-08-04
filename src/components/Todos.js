@@ -1,25 +1,16 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { modifyTodo, removeTodo } from "../features/todo/todoSlice";
+import { useSelector } from "react-redux";
+import EditableTodo from "./EditableTodo";
 
 function Todos() {
   const todos = useSelector((state) => state.todos);
-  const dispatch = useDispatch();
 
   return (
     <>
       <div>Todos</div>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>
-            <div >{todo.text}</div>
-            <button onClick={() => dispatch(removeTodo(todo.id))}>
-              remove
-            </button>
-            <button onClick={() => dispatch(modifyTodo(todo.id))}>
-              modify
-            </button>
-          </li>
+          <EditableTodo key={todo.id} todo={todo} />
         ))}
       </ul>
     </>

@@ -1,1 +1,85 @@
 
+
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+} 
+.input_pad{
+    padding-top: 50px;
+}
+
+
+.input_input{
+    width: 50rem;
+    text-align: center;
+    height: 35px;
+
+    
+
+
+}
+.button{
+    margin-left: 15px;
+    height: 35px;
+   
+
+   
+}
+.date{
+    padding-top: 20px;
+}
+.date input{
+
+
+    width: 10rem;
+    height: 2rem;
+    margin-right: 10px;
+
+}
+.todos{
+    padding-bottom: 2rem;
+
+}
+.todos_text{
+
+    padding-bottom: 10px;
+    font-size: 150%;
+
+}
+.remove{
+    margin-right: 10px;
+    height: 30px;
+
+
+}
+
+.modify{
+    height: 30px;
+
+}
+
+.border{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.edit_text{
+    margin-top:20px ;
+}
+.height{
+    height: 30px;
+    width: 20rem;
+    text-align: center;
+
+}
+
+
+.color{
+    background-color:rgb(20, 20, 20);
+    color: white;
+}
+

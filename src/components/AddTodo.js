@@ -22,19 +22,27 @@ function AddTodo() {
   };
 
   return (
-    <form onSubmit={addTodoHandler} className="space-x-3 mt-12">
-      <input
-        type="text"
-        placeholder="Enter a Todo..."
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <input
-        type="datetime-local"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-      />
-      <button type="submit">Add Todo</button>
+    <form onSubmit={addTodoHandler}>
+      <div className="input input_pad">
+        <input
+          className="input_input border"
+          type="text"
+          placeholder="Enter a Todo..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button type="submit" className="button border color">
+          Add Todo
+        </button>
+      </div>
+      <div className="input date">
+        <input
+          className="border color"
+          type="datetime-local"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
+      </div>
     </form>
   );
 }

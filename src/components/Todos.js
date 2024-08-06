@@ -7,12 +7,16 @@ function Todos() {
 
   return (
     <>
-      <div>Todos</div>
-      <ul>
-        {todos.map((todo) => (
-          <EditableTodo key={todo.id} todo={todo} />
-        ))}
-      </ul>
+      <div className="input input_pad">
+        <h1>Todos</h1>
+      </div>
+      <div className="input">
+        <ul>
+          {todos.map((todo) => (
+            <EditableTodo key={todo.id} todo={todo} />
+          ))}
+        </ul>
+      </div>
     </>
   );
 }

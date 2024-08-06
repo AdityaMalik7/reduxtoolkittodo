@@ -9,9 +9,10 @@ export default function EditableTodo({ todo }) {
   const deadline = new Date(todo.deadline);
 
   return (
-    <li key={todo.id}>
+    <li key={todo.id} className="todos">
       {isEdititing ? (
         <input
+          className="input border height"
           type="text"
           value={todo.text}
           onChange={(e) =>
@@ -19,13 +20,24 @@ export default function EditableTodo({ todo }) {
           }
         />
       ) : (
-        <div style={{ color: deadline < new Date(Date.now()) ? "red" : "" }}>
+        <div
+          style={{ color: deadline < new Date(Date.now()) ? "red" : "" }}
+          className="todos_text"
+        >
           {todo.text}
         </div>
       )}
-      <button onClick={() => dispatch(removeTodo(todo.id))}>remove</button>
+      <button
+        onClick={() => dispatch(removeTodo(todo.id))}
+        className="remove border color"
+      >
+        remove
+      </button>
 
-      <button onClick={() => setIsEdititing((v) => !v)}>
+      <button
+        onClick={() => setIsEdititing((v) => !v)}
+        className="modify border edit_text color"
+      >
         {isEdititing ? "done" : "modify"}
       </button>
     </li>
